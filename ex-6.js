@@ -2,6 +2,12 @@ const carCollection = ["toyota", "fiat", "honda", "bmw"];
 
 function updateCarCollection(carBrand) {
   // Start coding here
+  console.log(carCollection.indexOf(carBrand));
+  const carIndex = carCollection.indexOf(carBrand);
+  console.log(carIndex);
+  return carIndex >= 0
+    ? `${carBrand} has already existed in the ${carIndex} of car collection`
+    : `new car collection is: ${carCollection.concat(carBrand)}`;
 }
 
 //ผลลัพธ์ที่ควรได้จาก Example case

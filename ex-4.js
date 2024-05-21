@@ -374,4 +374,44 @@ const bills = [
 ];
 
 // Start coding here
-const totalMembers;
+// const totalMembers = bills.reduce((acc, curr) => {
+//   if (!acc.includes(curr.member)) {
+//     console.log(acc);
+//     console.log (curr)
+//     acc.push(curr.member);
+//   }
+//   return acc;
+// }, []);
+// const billMembers = bills
+//   .filter((item) => {
+//     return item.member !== null;
+//   })
+//   .map((name) => {
+//     return name.member.name;
+//   })
+//   .reduce((acc, curr) => {
+//     if (!acc.includes(curr)) {
+//       acc.push(curr);
+//     }
+//     return acc;
+//   }, []);
+
+// console.log(billMembers);
+
+const billMembers = bills
+  .filter((item) => {
+    return item.member !== null;
+  })
+  .map((name) => {
+    return name.member.name;
+  });
+console.log(billMembers);
+
+const uniqueBillMembers = billMembers.reduce((acc, curr) => {
+  if (!acc.includes(curr)) {
+    acc.push(curr);
+  }
+  return acc;
+}, []);
+
+console.log(uniqueBillMembers);
