@@ -413,5 +413,7 @@ const uniqueBillMembers = billMembers.reduce((acc, curr) => {
   }
   return acc;
 }, []);
+const uniqueBillMembersLength = uniqueBillMembers.length;
 
 console.log(uniqueBillMembers);
+console.log(uniqueBillMembersLength);
