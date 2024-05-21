@@ -6,7 +6,7 @@ function updateCarCollection(carBrand) {
   const carIndex = carCollection.indexOf(carBrand);
   console.log(carIndex);
   return carIndex >= 0
-    ? `${carBrand} has already existed in the ${carIndex} of car collection`
+    ? `${carBrand} has already existed in the ${carIndex + 1} of car collection`
     : `new car collection is: ${carCollection.concat(carBrand)}`;
 }
 
