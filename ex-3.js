@@ -374,4 +374,11 @@ const bills = [
 ];
 
 // Start coding here
-const billMembers;
+function checkItemsInBills(items) {
+  return items.member !== null;
+}
+function whosThat(items) {
+  return items.member.name;
+}
+const billMembers = bills.filter(checkItemsInBills).map(whosThat);
+console.log(billMembers);
